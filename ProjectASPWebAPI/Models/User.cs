@@ -8,16 +8,18 @@ namespace ProjectASPWebAPI.Models
 {
     public class User
     {
-        public int Id { get; set; }
+        public int UserID { get; set; }
         [Required, MaxLength(50)]
-        public string FirstName { get; set; }
-        [Required, MaxLength(50)]
-        public string LastName { get; set; }
-        [Required, MaxLength(50)]
-        public string Email { get; set; }
-        [Required, MaxLength(50)]
-        public string Password { get; set; }
+        public string UserName { get; set; }
+        [Required, MaxLength(100)]
+        public string UserPassword { get; set; }
+        [Required, MaxLength(1)]
+        public string UserRole { get; set; }
+        [Required, MaxLength(100)]
+        public string UserImg { get; set; }
+        [Required]
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        [Required]
+        public DateTime UpdDate { get; set; }
     }
 }

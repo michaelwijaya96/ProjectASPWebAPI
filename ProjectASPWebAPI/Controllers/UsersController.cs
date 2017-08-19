@@ -33,23 +33,23 @@ namespace ProjectASPWebAPI.Controllers
             }
         }
 
-        [HttpPost]
-        public HttpResponseMessage InsertNewData([FromBody] User user)
-        {
-            using (var context = new Context())
-            {
-                context.Users.Add(new User()
-                {
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Email = user.Email,
-                    Password = user.Password,
-                    CreatedAt = DateTime.Today,
-                    UpdatedAt = DateTime.Today
-                });
-                context.SaveChanges();
-            }
-            return Request.CreateResponse(HttpStatusCode.Created, "OK!");
-        }
+        //[HttpPost]
+        //public HttpResponseMessage InsertNewData([FromBody] User user)
+        //{
+        //    using (var context = new Context())
+        //    {
+        //        context.Users.Add(new User()
+        //        {
+        //            FirstName = user.FirstName,
+        //            LastName = user.LastName,
+        //            Email = user.Email,
+        //            Password = user.Password,
+        //            CreatedAt = DateTime.Today,
+        //            UpdatedAt = DateTime.Today
+        //        });
+        //        context.SaveChanges();
+        //    }
+        //    return Request.CreateResponse(HttpStatusCode.Created, "OK!");
+        //}
     }
 }
